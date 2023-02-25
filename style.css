@@ -209,6 +209,7 @@ section.cards {
   border-radius: 10px;
   max-width: 38.4rem;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card .content {
@@ -235,4 +236,15 @@ section.cards {
 .location i {
   color: #e45858;
   font-size: 2.4rem;
+}
+
+.cards:has(.card:hover) .card:not(:hover) {
+  opacity: 0.6;
+  scale: 0.98;
+}
+
+@media (max-width: 36rem) {
+  section.cards {
+    grid-template-columns: 1fr;
+  }
 }
